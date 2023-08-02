@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Zilla+Slab:ital,wght@0,400;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>EarthExplorer</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <nav class="menu">
+                <div class="menu-contenedor">
+                    <a href="#" id="btn-categoria">Categorias</a>
+                    <a href="#" id="btn-rankig">Ranking Global</a>
+                    <a href="#" id="btn-avance">Informacion Jugador</a>
+
+                </div>
+
+
+
+
+            </nav>
+
+            <div class="textos">
+                <img src="img/Logo.png" class="logo" alt="Earth Explorer">
+                <div class="personaje-animado">
+                    <img src="img/Animaciones/idle_0.png" alt="Jugador" class="imagen-animada">
+                </div>
+                <div class="contenedor-textos">
+                    <h2>Es un juego educativo en 2D que combina diversión y aprendizaje sobre ecología y el cuidado del
+                        medio ambiente.
+                        A través de tres emocionantes planos, los jugadores explorarán y aprenderán sobre la naturaleza
+                        mientras enfrentan desafíos y enemigos.
+                        Con la integración de una API, los jugadores pueden elegir temas relacionados con la ecología y
+                        el cuidado ambiental.<br><br>
+                        ¡Únete a esta aventura sostenible y sé parte del cambio!</h2>
+                    <a href="files/EarthExplorer.apk" class="btn-descargar" download>Descargar</a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <section class="acerca-de" id="acerca-de">
+            <div class="contenedor">
+                <div class="foto"><img src="img/Imagen-Acerca_De.png" alt=""></div>
+            </div>
+            <article>
+                <h3>Categorías </h3>
+                <p id="categoriaMasJugada">Mas Jugada</p>
+                <p id="categoriaMenosJugada">Menos Jugada</p>
+            </article>
+        </section>
+
+        <section class="menu">
+            <div class="contenedor">
+                <h3 class="titulo">Ranking Global</h3>
+                <div class="contenedor-rankig">
+                    <div class="contenedor-rankig2">
+                        <article id="Ranking">
+
+                            <div class="contenedor-mayor" id="contenedorNiveles">
+
+
+                            </div>
+                        </article>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="datos">
+
+            <div class="datos-texto">
+                <h2 id="estadisticas">Conoce Tus Estadística</h2>
+            </div>
+            <form class="formulario" action="">
+                <input id="idJugador" type="number" placeholder="Ingrea Tu Id">
+                <input id="btnObtenerDatos" type="button" value="Buscar">
+            </form>
+
+            <section class="trabajos">
+                <div class="contenedor">
+                    <h3 class="titulo">Niveles</h3>
+                    <div class="contenedor-trabajos" id="contenedorTrabajos">
+
+
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="categorias-respuesta" id="categoriasRespuestas">
+                
+
+        </div>
+
+
+
+        <footer>
+            <section class="redes-sociales">
+                <div class="contenedor">
+                    <div class="copyrigh">
+                        <p> &#169;Copyrigh EarthExplorer </p>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+</body>
+
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>

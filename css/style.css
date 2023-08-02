@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Zilla Slab', serif;
+
+    font-size: 16px;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    max-height: 650px;
+    overflow:hidden;
+   
+}
+
+header .contenedor .menu {
+    margin-top: 2rem;
+    
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  
+}
+
+
+header .contenedor .menu .menu-contenedor   {
+     margin-left: 5rem;
+}
+
+header .contenedor .menu .menu-contenedor a   {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    
+    margin: 30px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header .contenedor .textos .contenedor-textos a:hover   {
+    background: #1661a7;
+}
+
+
+
+
+
+
+header .contenedor .menu .menu-contenedor a:hover{
+    text-decoration: underline;
+}
+
+
+header .textos .logo{
+    position: relative;
+    top: -75px; /* ajustar los valores para mover la imagen */
+    left: -38px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .textos .personaje-animado{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20rem;
+  margin-left: 25rem;
+  width: 180px; /* Ajusta el ancho según el tamaño de cada cuadro de animación */
+  height: 180px; /* Ajusta el alto según el tamaño de cada cuadro de animación */
+  
+  background-repeat: no-repeat;
+  background-size:contain;
+  
+}
+
+
+header  .textos .contenedor-textos{
+   
+    
+    width: 700px;
+    height: 150px;
+    position: relative;
+    top: -200px; /* ajustar los valores para mover la imagen */
+    left: 0px;
+}
+
+
+header  .textos .contenedor-textos h2{
+  color: aliceblue;
+  margin-bottom: 1rem;
+   text-align: justify; 
+
+    
+}
+header  .textos .contenedor-textos .btn-descargar{
+    background: #3895ea;
+	color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+	border: none;
+	border-radius: 3px;
+	padding: 8px 40px;
+	cursor: pointer;
+    text-decoration: none;
+    
+    
+}
+
+
+.main{
+    background: url('../img/bg-textura.png');
+    background-repeat: repeat;
+}
+
+.main .acerca-de .contenedor{
+    overflow: visible;
+    position: relative;
+}
+
+.main .acerca-de .foto{
+    width: 80%;
+    
+    position: absolute;
+    left:80;
+    top: 10px;
+    z-index: 0;
+    
+    box-shadow: 0px 0px 15px rgba(0,0,0,.45);
+}
+
+.main .acerca-de .foto img{
+    width: 100%;
+    vertical-align: top;
+   
+}
+
+.main .acerca-de article{
+    background: #fff;
+    padding: 40px;
+    width: 40%;
+    position: relative;
+    top: 500px;
+    right: 140px;
+    z-index: 1;
+    float: right;
+    box-shadow: 0px 0px 15px rgba(0,0,0,.35);
+}
+
+.main .acerca-de article h3{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .acerca-de article p{
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+
+.main .menu{
+     
+    
+    
+    padding-top: 520px;
+    margin-bottom: 50px;
+ 
+    
+   
+   
+}
+
+
+
+
+.main .menu .titulo{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main .menu .contenedor-rankig,
+.main .menu .contenedor-rankig2{
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+    
+}
+
+.main .menu article{
+    width: 100%;
+  
+   
+}
+
+.main .menu article .contenedor-mayor{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.main .menu .categoria{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main .menu .nivel{
+    width: 33%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 4px dotted #000;
+    height: 150px;
+    overflow: hidden;
+}
+
+.main .menu .numero{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.main .menu .tiempo{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.main .menu .descripcion{
+    font-size: 16px;
+    color: #676767;
+    clear: both;
+}
+
+.datos{
+    width: 100%;
+    
+    text-align: center;
+}
+
+.datos h2{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    
+}
+
+.datos form input[type="number"]{
+    
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 1px 1px;
+    font-size: 20px;
+    color: #000;
+    height: 40px;
+
+
+}
+
+.datos form input[type="button"]{
+
+background: #3895ea;
+color: #fff;
+border: none;
+border-radius: 3px;
+padding: 8px 40px;
+cursor: pointer;
+}
+
+.datos form input[type="button"]:hover{
+
+    background: #1661a7;
+}
+
+
+
+.datos .trabajos {
+	
+	padding:60px 0px ;
+    
+}
+
+.datos .trabajos .contenedor{
+	overflow: hidden;
+
+}
+
+.datos .trabajos .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #323068;
+	text-align: center;
+}
+
+.datos .trabajos .contenedor-trabajos{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo{
+	width: 20%;
+	margin-bottom: 40px;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo .thumb{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo .thumb img{
+	width: 90%;
+	vertical-align: top;
+	border-radius: 3px;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo .descripcion{
+	text-align: center;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo .descripcion .nombre{
+	font-weight: 700;
+	color: #3895ea;
+	margin-bottom: 10px;
+}
+
+.datos .trabajos .contenedor-trabajos .trabajo .descripcion .Categoria{
+	font-size: 14px;
+	color: #636363;
+}
+
+.categorias-respuesta .contenedor .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #323068;
+	text-align: center;
+}
+
+.categorias-respuesta .contenedor .categorias h3{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.categorias-respuesta .contenedor .categorias p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categorias-respuesta .contenedor .categorias .contenedor-respuestas{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.categorias-respuesta .contenedor .categorias .contenedor-respuestas .correctas{
+ color: rgb(17, 204, 48);
+ font-weight: 600;
+}
+.categorias-respuesta .contenedor .categorias .contenedor-respuestas .incorretas{
+    color: rgb(204, 17, 17);
+    font-weight: 600;
+}
+
+
+.bar-container {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #810909;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    width: 50%; /* Inicialmente, la barra estará vacía */
+    transition: width 0.5s ease; /* Añadimos una transición suave para animar el llenado */
+  }
+  
+
+
+
+
+footer .redes-sociales{
+	background: #1E2B38;
+	padding: 30px ;
+}
+
+
+footer .copyrigh{
+    text-align: center;
+    padding: 15px 0px;
+    color: white;
+}
+
+
+@media screen and (max-width: 1221px) {
+
+    header  .textos .contenedor-textos{
+        width: 700px;
+        height: 150px;
+        position: relative;
+        top: -700px; /* ajustar los valores para mover la imagen */
+        left: 0px;
+    }
+    header .textos .personaje-animado{
+      
+      
+        position: relative;
+        top: -500px; /* ajustar los valores para mover la imagen */
+        left: 350px;
+        
+      }
+
+    .main .menu .nivel{
+        width: 45%;
+        margin-bottom: 30px;
+        padding: 20px;
+        margin: 10px;
+        border: 4px dotted #000;
+        height: 150px;
+        overflow: hidden;
+    }
+    .datos .trabajos .contenedor-trabajos .trabajo{
+        width: 25%;
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 1221px) {
+
+
+      header .textos .personaje-animado img{
+        width: 70%;
+        
+ } 
+ .main .acerca-de article{
+      
+    top: 400px;
+    right: 140px;
+
+
+}
+}
+
+
+@media screen and (max-width: 950px) {
+
+
+    header .textos .personaje-animado img{
+        opacity: 0;
+         
+     }
+
+}
+
+@media screen and (max-width: 800px) {
+   
+
+    header div nav{
+        opacity: 0;
+
+    }
+
+    header  .textos .contenedor-textos h2{
+        color: aliceblue;
+        margin-bottom: 1rem;
+        width: 80%;
+        font-size: 20px;    
+        font-weight: 500;
+          
+      }
+
+  
+
+    header .textos h3{
+        font-size: 18px;
+    }
+
+    .main .acerca-de .foto{
+        width: 100%;
+        position: relative;
+    }
+
+    .main .acerca-de article {
+        position: relative;
+        width: 80%;
+        padding: auto;
+        top: 0px;
+        right: 100px;
+        transform: translate(0px, 0);
+    }
+    .main .menu .nivel{
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 20px;
+        margin: 10px;
+        border: 4px dotted #000;
+        height: 150px;
+        overflow: hidden;
+    }
+    .main .menu {
+        padding-top: 300px;
+    }
+
+    .main .menu article{
+        width: 100%;
+    }
+
+    .datos .trabajos .contenedor-trabajos .trabajo{
+        width: 50%;
+        
+    }
+
+    .datos form input[type="number"]{
+    
+        height: 40px;
+        width: 300px;
+        
+    
+    }
+    
+    .datos form input[type="button"]{
+    
+        height: 40px;
+        
+    }
+    
+    .datos form input[type="button"]:hover{
+    
+        background: #1661a7;
+    }
+    
+    
+
+   
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+
+    
+
+    header .textos .logo{
+       width: 100%;
+       margin-left: 30px;
+    }
+    
+    header  .textos .contenedor-textos {
+        width: 100%;
+
+    }
+    header  .textos .contenedor-textos h2{
+        color: aliceblue;
+        margin-top: 20px;
+        font-size: 18px;    
+        padding-bottom: 10px;
+          
+      }
+
+  
+    .main .acerca-de article {
+        width: 90%;
+        padding: center;
+        position: sticky;
+       
+        margin-left: 20px;
+        
+    }
+
+    .main .acerca-de article h3{
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .main .menu article .nombre,
+    .main .menu article .precio{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .main .ubicacion .direccion{
+        margin-bottom: 15px;
+    }
+
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios{
+        width: 100%;
+        text-align: center;
+    }
+    .datos .trabajos .contenedor-trabajos .trabajo{
+        width: 100%;
+        
+    }
+    .datos form input[type="button"]{
+    
+       margin-top: 10px;
+        
+    }
+}
+
+
