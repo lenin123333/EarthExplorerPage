@@ -1,136 +1,33 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-}
-
-body{
-    font-family: 'Zilla Slab', serif;
-
-    font-size: 16px;
-}
-
-.contenedor{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
-
-header {
-    width: 100%;
-    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-    max-height: 650px;
-    overflow:hidden;
-   
-}
-
-header .contenedor .menu {
-    margin-top: 2rem;
-    
-    width: 100%;
-    display: flex;
-    justify-content: end;
-  
-}
-
-
-header .contenedor .menu .menu-contenedor   {
-     margin-left: 5rem;
-}
-
-header .contenedor .menu .menu-contenedor a   {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    
-    margin: 30px 20px;
-    text-decoration: none;
-    position: relative;
-}
-
-header .contenedor .textos .contenedor-textos a:hover   {
-    background: #1661a7;
-}
-
-
-
-
-
-
-header .contenedor .menu .menu-contenedor a:hover{
-    text-decoration: underline;
-}
-
-
-header .textos .logo{
-    position: relative;
-    top: -75px; /* ajustar los valores para mover la imagen */
-    left: -38px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header .textos .personaje-animado{
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 20rem;
-  margin-left: 25rem;
-  width: 180px; /* Ajusta el ancho según el tamaño de cada cuadro de animación */
-  height: 180px; /* Ajusta el alto según el tamaño de cada cuadro de animación */
-  
-  background-repeat: no-repeat;
-  background-size:contain;
-  
-}
-
-
-header  .textos .contenedor-textos{
    
     
-    width: 700px;
-    height: 150px;
-    position: relative;
-    top: -200px; /* ajustar los valores para mover la imagen */
-    left: 0px;
 }
 
-
-header  .textos .contenedor-textos h2{
-  color: aliceblue;
-  margin-bottom: 1rem;
-   text-align: justify; 
-
-    
-}
-header  .textos .contenedor-textos .btn-descargar{
-    background: #3895ea;
-	color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-	border: none;
-	border-radius: 3px;
-	padding: 8px 40px;
-	cursor: pointer;
-    text-decoration: none;
-    
-    
-}
-
-
-
-footer .redes-sociales{
-	background: #1E2B38;
-	padding: 30px ;
-}
-
-
-footer .copyrigh{
+header{
+    background: #DCAB56;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
     text-align: center;
-    padding: 15px 0px;
-    color: white;
+    min-height: 5vh;
+}
+
+main{
+    min-height: 70vh;
+    border-radius: 15px;
+    background: #DCAB56;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+	background: #DCAB56;
+	margin: 20px ;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 5vh;
 }
 
