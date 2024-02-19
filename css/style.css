@@ -1,33 +1,172 @@
 body {
     margin: 0;
-   
+    background: #000;
+    color:white;
     
 }
 
 header{
-    background: #DCAB56;
-    padding: 10px;
+    
     margin: 20px;
     border-radius: 15px;
     text-align: center;
-    min-height: 5vh;
+    min-height: 3vh;
+   
 }
 
 main{
-    min-height: 70vh;
+    
+    min-height: 50vh;
     border-radius: 15px;
-    background: #DCAB56;
     padding: 20px;
-    margin: 20px;
-    margin-top: 15px;
+    margin: 10px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+main video{
+    width:80%;
+    height: auto;
+   
+
+    
+}
+
+.contenido-info{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-info iframe{
+    width:600px;
+    height:350px;
+    margin-right: 20px;
+}
+.contenido-info  div p{
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 300px;
+    font-weight: bold;
+
+} 
+
+.content-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    
+}
+.content-btn a{
+    background: #1a9211;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+footer .redes-sociales{
+	background: #1E2B38;
+	padding: 60px 0;
+}
+
+footer .redes-sociales .contenedor{
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociales a{
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: block;
+	padding: 15px 0px;
+	border-radius: 3px;
+	font-size: 30px;
+	margin: 0 20px;
+}
+
+
+footer .redes-sociales a img{
+    width: 30px;
+    color: white;
+    background: white;
+}   
+
+footer .redes-sociales .youtube:hover{
+	background: #ff0000;
+}
+
+footer .redes-sociales .instagram:hover{
+	background: #000000;
+}
+
+footer .redes-sociales .github:hover{
+	background: #9735c1;
 }
 
 footer {
     text-align: center;
-	background: #DCAB56;
-	margin: 20px ;
-    padding: 20px;
     border-radius: 15px;
     min-height: 5vh;
 }
 
+
+
+
+@media screen and (max-width: 600px) {
+	.contenido-info{
+       flex-direction: column;
+       
+    }
+    
+main{
+    min-height: 25vh;
+}
+
+    main video{
+        width:100%;
+        height: auto;
+    
+        
+    }
+
+    .contenido-info iframe{
+        width:300px;
+        height:150px;
+        margin-right: 20px;
+    }
+
+    .content-btn a{
+        font-size: 16px;
+    }
+    .contenido-info  div p{
+        font-size: 20px;
+        text-align: center;
+    
+    } 
+    
+
+footer .redes-sociales a{
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    width: 50px;
+}
+    footer .redes-sociales .contenedor{
+		flex-wrap: wrap;
+		padding: 20px 0px;
+	}
+
+}
