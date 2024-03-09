@@ -2,9 +2,8 @@
   "compilerOptions": {
     "composite": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",  // Cambiado de "Node16" a "Node"
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
