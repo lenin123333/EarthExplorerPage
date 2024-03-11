@@ -1,12 +1,13 @@
 import './App.css'
 import Header from './componets/Header'
+import Main from './componets/Main'
 
 function App() {
  
   return (
     <>
        <Header />
-       Hola
+       <Main/>
     </>
   )
 }

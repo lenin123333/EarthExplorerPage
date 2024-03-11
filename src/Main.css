@@ -1,0 +1,25 @@
+/* styles.css */
+.main {
+    text-align: center;
+    margin: 50px 0; /* Ajusta el margen según sea necesario */
+  }
+  
+  .main-title {
+    font-size: 4rem; /* Ajusta el tamaño del título según sea necesario */
+    color: #333; /* Cambia el color del texto según sea necesario */
+    /* Otros estilos para el título */
+  }
+  /* styles.css */
+.main-description {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto según sea necesario */
+    color: #666; /* Cambia el color del texto según sea necesario */
+    max-width: 800px; /* Ajusta el ancho máximo del párrafo según sea necesario */
+    margin: 20px auto; /* Ajusta los márgenes según sea necesario */
+    /* Otros estilos para el párrafo */
+  }
+  
+  /* styles.css */
+.trailer-container {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  }
+  
