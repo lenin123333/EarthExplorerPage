@@ -1,27 +1,27 @@
 // Header.tsx
 import React, { useState, useEffect } from 'react';
-import MainMenu from '../assets/MainMenu.jpg';
-import logo from '../assets/logo/Logo.png';
-import bird_1 from '../assets/fly/fly_0.png';
-import bird_2 from '../assets/fly/fly_1.png';
-import bird_3 from '../assets/fly/fly_2.png';
-import bird_4 from '../assets/fly/fly_3.png';
-import bird_5 from '../assets/fly/fly_4.png';
+import MainMenu from '../assets/MainMenu.webp';
+import logo from '../assets/logo/Logo.webp';
+import bird_1 from '../assets/fly/fly_0.webp';
+import bird_2 from '../assets/fly/fly_1.webp';
+import bird_3 from '../assets/fly/fly_2.webp';
+import bird_4 from '../assets/fly/fly_3.webp';
+import bird_5 from '../assets/fly/fly_4.webp';
 
-import bird_idol_5 from '../assets/idol/idle_2_0.png';
-import bird_idol_4 from '../assets/idol/idle_2_1.png';
-import bird_idol_3 from '../assets/idol/idle_2_2.png';
-import bird_idol_2 from '../assets/idol/idle_2_3.png';
-import bird_idol_1 from '../assets/idol/idle_2_4.png';
+import bird_idol_5 from '../assets/idol/idle_2_0.webp';
+import bird_idol_4 from '../assets/idol/idle_2_1.webp';
+import bird_idol_3 from '../assets/idol/idle_2_2.webp';
+import bird_idol_2 from '../assets/idol/idle_2_3.webp';
+import bird_idol_1 from '../assets/idol/idle_2_4.webp';
 
-import idolEnemy from '../assets/enemy/idle_0.png';
-import idolEnemy_1 from '../assets/enemy/idle_1.png';
-import idolEnemy_2 from '../assets/enemy/idle_2.png';
-import idolEnemy_3 from '../assets/enemy/idle_3.png';
-import idolEnemy_4 from '../assets/enemy/idle_4.png';
-import idolEnemy_5 from '../assets/enemy/idle_5.png';
-import idolEnemy_6 from '../assets/enemy/idle_6.png';
-import idolEnemy_7 from '../assets/enemy/idle_7.png';
+import idolEnemy from '../assets/enemy/idle_0.webp';
+import idolEnemy_1 from '../assets/enemy/idle_1.webp';
+import idolEnemy_2 from '../assets/enemy/idle_2.webp';
+import idolEnemy_3 from '../assets/enemy/idle_3.webp';
+import idolEnemy_4 from '../assets/enemy/idle_4.webp';
+import idolEnemy_5 from '../assets/enemy/idle_5.webp';
+import idolEnemy_6 from '../assets/enemy/idle_6.webp';
+import idolEnemy_7 from '../assets/enemy/idle_7.webp';
 
 
 
