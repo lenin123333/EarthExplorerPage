@@ -1,0 +1,131 @@
+/* En tu archivo CSS */
+h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.comments {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-list {
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra al comment-list */
+    border-radius: 10px;
+    overflow: hidden; /* Para ocultar el overflow generado por la sombra */
+    margin: 0 auto; /* Centra el comment-list */
+    margin-bottom: 30px;
+  }
+  
+  .comment-form {
+    margin: 0 auto;
+    width: 45%;
+    max-width: 400px;
+  }
+  
+  .comment-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .comment-form textarea,
+  .comment-form input,
+  .comment-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comment-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .comment-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .comment-container {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  
+  .comment strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+
+:root {
+    --color-inactivo: #5f5050;
+    --color-hover: #ffa400;
+}
+.container-star{
+    display: flex;
+    margin-bottom: 10px;
+}
+.valoracion {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container-start{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.valoracion div {
+    background-color: initial;
+    border: 0;
+    color: var(--color-inactivo);
+    transition: 1s all;
+}
+.valoracion div:hover {
+    cursor: pointer;
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+.star:nth-child(1):hover ~ .star {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+.star:nth-child(2):hover ~ .star {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+.star:nth-child(3):hover ~ .star {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+.star:nth-child(4):hover ~ .star {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+.star:nth-child(5):hover ~ .star {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+
+.active i{
+    color: var(--color-hover);
+}
