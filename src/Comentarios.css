@@ -11,7 +11,14 @@ h2{
     margin-top: 20px;
    
   }
-  
+  .comment-container p{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .comment-container p strong{
+    font-size: 12px;
+  }
   .comment-list {
     color: white;
     width: 60%;

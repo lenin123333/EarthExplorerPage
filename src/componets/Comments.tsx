@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import '../Comentarios.css'
 const Comments: React.FC = () => {
   const [name, setName] = useState('');
+  const [correo, setCorreo] = useState('');
+
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
-  const [commentsList, setCommentsList] = useState<Array<{ name: string; comment: string; rating: number }>>([]);
+  const [commentsList, setCommentsList] = useState<Array<{ name: string; email:string; comment: string; rating: number }>>([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Agregamos el comentario a la lista
-    const newComment = { name, comment, rating };
+    const newComment = { name, email:correo, comment, rating };
     setCommentsList([newComment, ...commentsList]);
 
     // Limpiamos los campos
     setName('');
     setComment('');
+    setCorreo('')
     setRating(0);
   };
 
@@ -26,7 +29,8 @@ const Comments: React.FC = () => {
         {commentsList.map((c, index) => (
           <div key={index} className="comment-container">
             <p>
-              <strong>{c.name}</strong> - {c.comment}
+              <strong className='sub'>{c.email}</strong>
+              {c.name} - {c.comment}
             </p>
             <div className="container-start">
 
@@ -46,6 +50,8 @@ const Comments: React.FC = () => {
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Nombre:</label>
           <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+          <label htmlFor="correo">Correo:</label>
+          <input type="email" id="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
 
           <label htmlFor="comment">Comentario:</label>
           <textarea id="comment" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>

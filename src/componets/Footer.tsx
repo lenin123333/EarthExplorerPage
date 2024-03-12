@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="social-icons">
-        <a href="mailto:correo@example.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:earthexplorer42@gmail.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/channel/UC58TDtVB46x4Wwa7izHqqqA" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faYoutube} />
         </a>
-        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@earthexplorergame" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTiktok} />
         </a>
       </div>
