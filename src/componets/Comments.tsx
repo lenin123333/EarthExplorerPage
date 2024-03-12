@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // Importa el módulo de Firebase desde el archivo TypeScript
-import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/firestore';
+import {  collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/firestore';
 
 // Asegúrate de que la ruta sea correcta
 import '../Comentarios.css';
