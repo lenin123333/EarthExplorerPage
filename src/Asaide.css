@@ -38,7 +38,7 @@
     }
   
     .gif-container img {
-      max-width: 100%;
+      width: 80%;
       flex: 0 0 50%; /* Establece el ancho del 50% para mostrar dos en cada fila */
     }
   }
