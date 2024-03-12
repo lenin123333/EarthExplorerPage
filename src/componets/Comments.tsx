@@ -1,26 +1,60 @@
-import React, { useState } from 'react';
-import '../Comentarios.css'
+import React, { useEffect, useState } from 'react';
+// Importa el módulo de Firebase desde el archivo TypeScript
+import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/firestore';
+
+// Asegúrate de que la ruta sea correcta
+import '../Comentarios.css';
+import { db } from '../config/firebaseConfig';
+
+interface Comment {
+  name: string;
+  correo: string;
+  comment: string;
+  rating: number;
+  timestamp: Date;
+}
+
 const Comments: React.FC = () => {
   const [name, setName] = useState('');
   const [correo, setCorreo] = useState('');
-
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
-  const [commentsList, setCommentsList] = useState<Array<{ name: string; email:string; comment: string; rating: number }>>([]);
+  const [commentsList, setCommentsList] = useState<Comment[]>([]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Agregamos el comentario a la lista
-    const newComment = { name, email:correo, comment, rating };
-    setCommentsList([newComment, ...commentsList]);
+    const newComment: Comment = { name, correo, comment, rating, timestamp: new Date() };
 
-    // Limpiamos los campos
-    setName('');
-    setComment('');
-    setCorreo('')
-    setRating(0);
+    try {
+      // Utiliza la función addDoc para añadir un documento a la colección
+      await addDoc(collection(db, 'comments'), newComment);
+      // Actualiza el estado con el nuevo comentario
+      setCommentsList([newComment, ...commentsList]);
+      setName('');
+      setCorreo('');
+      setComment('');
+      setRating(0);
+    } catch (error) {
+      console.error('Error al guardar el comentario en Firebase:', error);
+    }
   };
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        // Utiliza las funciones de Firestore para obtener los comentarios
+        const snapshot = await getDocs(query(collection(db, 'comments'), orderBy('timestamp', 'desc'), limit(3)));
+
+        const fetchedComments: Comment[] = snapshot.docs.map((doc) => doc.data() as Comment);
+        setCommentsList(fetchedComments);
+      } catch (error) {
+        console.error('Error al obtener los comentarios de Firebase:', error);
+      }
+    };
+
+    fetchComments();
+  }, []);
 
   return (
     <div className="comments">
@@ -29,19 +63,16 @@ const Comments: React.FC = () => {
         {commentsList.map((c, index) => (
           <div key={index} className="comment-container">
             <p>
-              <strong className='sub'>{c.email}</strong>
+              <strong className='sub'>{c.correo}</strong>
               {c.name} - {c.comment}
             </p>
             <div className="container-start">
-
               {[5, 4, 3, 2, 1].map((star) => (
                 <div
                   key={star}
                   className={`star ${star <= c.rating ? 'active' : ''}`}
                 ><i className="fa fa-star"></i></div>
               ))}
-
-
             </div>
           </div>
         ))}
@@ -57,8 +88,6 @@ const Comments: React.FC = () => {
           <textarea id="comment" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
 
           <div className="container-star">
-
-
             <label htmlFor="rating">Estrellas:</label>
             <div className="valoracion">
               {[5, 4, 3, 2, 1].map((star) => (
