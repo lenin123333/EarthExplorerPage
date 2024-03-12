@@ -4,11 +4,13 @@ import '../Main.css'
 
 const Main: React.FC = () => {
   return (
-    <div className="main">
-      <h2 className="main-title">EarthExplorer</h2>
-      <p className="main-description">
-        EarthExplorer, el juego de plataformas 2D, te desafía a enfrentar enemigos, descubrir secretos ocultos y reconstruir una historia perdida en un paisaje postapocalíptico. Sumérgete en esta experiencia única con gráficos vibrantes y mecánicas envolventes, explorando los rincones más oscuros mientras luchas por la supervivencia y descubres la verdad detrás de la devastación. ¡Una emocionante mezcla de emoción, intriga y descubrimientos te espera en EarthExplorer!
-      </p>
+    <main className="main" >
+      <div>
+        <h2 className="main-title">EarthExplorer</h2>
+        <p className="main-description">
+          Adéntrate en la fascinante historia de un personaje impactado por un rayo, quien despierta en un mundo transformado por la contaminación. Donde una vez reinaban bosques y ríos claros, ahora la contaminación ha sumido todo en la desolación. En este emocionante juego de plataformas, te enfrentarás a enemigos desafiantes y superarás obstáculos mientras te sumerges en una narrativa que busca concienciar sobre la importancia de cuidar nuestro planeta y restaurar su antigua belleza natural.
+        </p>
+      </div>
       <div className="trailer-container">
         <iframe
           width="560"
@@ -20,7 +22,7 @@ const Main: React.FC = () => {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </main>
   );
 };
 

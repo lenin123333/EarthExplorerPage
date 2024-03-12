@@ -1,6 +1,7 @@
 import './App.css'
 import Asaide from './componets/Asaide'
 import Comments from './componets/Comments'
+import Footer from './componets/Footer'
 import Header from './componets/Header'
 import Main from './componets/Main'
 
@@ -12,6 +13,7 @@ function App() {
        <Main/>
        <Asaide/>
        <Comments/>
+       <Footer/>
     </>
   )
 }

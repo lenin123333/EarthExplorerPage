@@ -29,13 +29,15 @@ const Comments: React.FC = () => {
               <strong>{c.name}</strong> - {c.comment}
             </p>
             <div className="container-start">
-              {c.rating}
+
               {[5, 4, 3, 2, 1].map((star) => (
                 <div
                   key={star}
-                  className={` ${star <= c.rating ? 'active' : ''}`}
-                ><i className="fas fa-star"></i></div>
+                  className={`star ${star <= c.rating ? 'active' : ''}`}
+                ><i className="fa fa-star"></i></div>
               ))}
+
+
             </div>
           </div>
         ))}

@@ -1,25 +1,43 @@
-/* styles.css */
+/* Main.css */
 .main {
-    text-align: center;
-    margin: 50px 0; /* Ajusta el margen según sea necesario */
-  }
-  
-  .main-title {
-    font-size: 4rem; /* Ajusta el tamaño del título según sea necesario */
-    color: #333; /* Cambia el color del texto según sea necesario */
-    /* Otros estilos para el título */
-  }
-  /* styles.css */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Ajusta la separación entre los elementos según tus preferencias */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  animation: fadeInUp 1s ease-in-out; /* Agrega una animación de fadeInUp */
+  background-color: #000; /* Cambia el color de fondo a negro */
+  color: #fff; /* Cambia el color del texto a blanco */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.main-title {
+  font-size: 2.5rem; /* Ajusta el tamaño del título según tus preferencias */
+  color: #fff; /* Cambia el color del título a blanco */
+  margin-bottom: 10px;
+}
+
 .main-description {
-    font-size: 1.5rem; /* Ajusta el tamaño del texto según sea necesario */
-    color: #666; /* Cambia el color del texto según sea necesario */
-    max-width: 800px; /* Ajusta el ancho máximo del párrafo según sea necesario */
-    margin: 20px auto; /* Ajusta los márgenes según sea necesario */
-    /* Otros estilos para el párrafo */
+  font-size: 1.2rem; /* Ajusta el tamaño del párrafo según tus preferencias */
+  color: #fff; /* Cambia el color del párrafo a blanco */
+  margin-bottom: 20px;
+  text-align: justify; /* Justifica el texto */
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .main {
+     flex-direction: column;
+     color: #fff;
   }
-  
-  /* styles.css */
-.trailer-container {
-    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  iframe{
+   
+    width:400px ;
+    
   }
-  
+}
