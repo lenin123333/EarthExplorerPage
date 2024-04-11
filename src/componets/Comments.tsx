@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 // Importa el módulo de Firebase desde el archivo TypeScript
 import {  collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/firestore';
