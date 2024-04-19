@@ -1,0 +1,41 @@
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-top: 20px; /* Agregamos margen superior */
+  }
+  
+  .sub-title {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-field {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .consult-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .consult-button:hover {
+    background-color: #0056b3;
+  }
+  
