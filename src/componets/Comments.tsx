@@ -5,6 +5,7 @@ import {  collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/fi
 // Asegúrate de que la ruta sea correcta
 import '../Comentarios.css';
 import { db } from '../config/firebaseConfig';
+import Alerta from './Alerta'; // Asegúrate de que la ruta sea correcta
 
 interface Comment {
   name: string;
@@ -20,12 +21,16 @@ const Comments: React.FC = () => {
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
   const [commentsList, setCommentsList] = useState<Comment[]>([]);
+  const [alerta, setAlerta] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const newComment: Comment = { name, correo, comment, rating, timestamp: new Date() };
-
+    if (!name || !correo || !comment) {
+      setAlerta({ type: 'error', msg: 'Llena todos los Campos' });
+      return;
+    }
     try {
       // Utiliza la función addDoc para añadir un documento a la colección
       await addDoc(collection(db, 'comments'), newComment);
@@ -57,6 +62,7 @@ const Comments: React.FC = () => {
   }, []);
 
   return (
+
     <div className="comments">
       <h2>Dejanos un Comentario</h2>
       <div className="comment-list">
@@ -102,6 +108,7 @@ const Comments: React.FC = () => {
           <button type="submit">Enviar Comentario</button>
         </form>
       </div>
+      {alerta && <Alerta alerta={alerta} />}
     </div>
   );
 };

@@ -39,3 +39,59 @@
     background-color: #0056b3;
   }
   
+  /* Estilos generales */
+  .estadisticas-container {
+    margin-top: 20px;
+    color: white;
+    width: 50%;
+    margin: 0 auto; /* Centra horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
+  }
+  .estadisticas-container h3{
+    font-size: 24px;
+  }
+  .estadisticas-container h4{
+    font-size: 20px;
+  }
+.tema-container {
+  margin-bottom: 20px;
+}
+
+.lineas-container {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Agrega una transición de transformación */
+}
+
+.linea {
+  display: flex;
+  height: 100%;
+  
+}
+
+.lineas-container:hover {
+  transform: scale(1.2); /* Aplica un zoom al hacer hover */
+}
+
+
+
+.correctas-barra {
+  background-color: #4caf50;
+}
+
+.incorrectas-barra {
+  background-color: #f44336;
+}
+
+.conteo-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+/* Estilos específicos */
+/* Ajusta según tus necesidades */
