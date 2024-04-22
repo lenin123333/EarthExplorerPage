@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../Estadisticas.css'; // Asegúrate de tener un archivo CSS para los estilos del Footer
 import Alerta from './Alerta'; // Asegúrate de que la ruta sea correcta
 
