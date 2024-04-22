@@ -95,3 +95,15 @@
 
 /* Estilos específicos */
 /* Ajusta según tus necesidades */
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .estadisticas-container {
+    
+    width: 75%;
+   
+  }
+  .container{
+    flex-direction: column;
+    
+  }
+}
