@@ -147,7 +147,7 @@ const Estadisticas = () => {
               <div className="mejor-tiempo-tarjeta" key={nivel}>
                 <h4>Nivel {+nivel + 1}</h4>
                 <p>Mejor tiempo: {datos.bestTime.timeLevel} segundos</p>
-                <p>Usuario: {datos.bestTime.User.nameUser}</p>
+                <p>Usuario: {datos.bestTime.User.name}</p>
               </div>
             ))}
           </div>
