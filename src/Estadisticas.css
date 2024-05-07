@@ -1,109 +1,117 @@
 .main-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    margin-top: 20px; /* Agregamos margen superior */
-  }
-  
-  .sub-title {
-    margin-right: 20px;
-    font-size: 20px;
-  }
-  
-  .input-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .input-field {
-    padding: 10px;
-    margin-right: 10px;
-  }
-  
-  .consult-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .consult-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos generales */
-  .estadisticas-container {
-    margin-top: 20px;
-    color: white;
-    width: 50%;
-    margin: 0 auto; /* Centra horizontalmente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
-  }
-  .estadisticas-container h3{
-    font-size: 24px;
-  }
-  .estadisticas-container h4{
-    font-size: 20px;
-  }
-.tema-container {
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
-.lineas-container {
-  width: 100%;
-  height: 20px;
-  background-color: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease; /* Agrega una transición de transformación */
-}
-
-.linea {
+.container {
   display: flex;
-  height: 100%;
-  
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 20px; /* Agregamos margen superior */
 }
 
-.lineas-container:hover {
-  transform: scale(1.2); /* Aplica un zoom al hacer hover */
+.sub-title {
+  margin-right: 20px;
+  font-size: 20px;
 }
 
-
-
-.correctas-barra {
-  background-color: #4caf50;
+.input-container {
+  display: flex;
+  align-items: center;
 }
 
-.incorrectas-barra {
-  background-color: #f44336;
+.input-field {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.consult-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.consult-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos generales */
+.estadisticas-container {
+  margin-top: 20px;
+  color: white;
+  width: 50%;
+  margin: 0 auto; /* Centra horizontalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
+}
+.estadisticas-container h3{
+  font-size: 24px;
+}
+.estadisticas-container h4{
+  font-size: 20px;
+}
+.tema-container {
+margin-bottom: 20px;
+}
+
+.circulos-container {
+display: flex;
+align-items: center;
+width: 100%;
+height: 20px;
+margin-bottom: 5px;
+}
+
+.circulo {
+height: 100%;
+border-radius: 50%;
+}
+
+.correctas {
+background-color: #4caf50;
+}
+
+.incorrectas {
+background-color: #f44336;
 }
 
 .conteo-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
-  font-size: 16px;
+display: flex;
+justify-content: space-between;
+margin-top: 5px;
+font-size: 16px;
 }
 
 /* Estilos específicos */
 /* Ajusta según tus necesidades */
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
-  .estadisticas-container {
-    
-    width: 75%;
-   
-  }
-  .container{
-    flex-direction: column;
-    
-  }
+.estadisticas-container {
+  
+  width: 75%;
+ 
+}
+.container{
+  flex-direction: column;
+  
+}
+}
+/* Estilos para los gráficos */
+.graficos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tema-container {
+  width: calc(33.33% - 10px); /* Ajusta el ancho del contenedor según el número de gráficos por fila */
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
 }

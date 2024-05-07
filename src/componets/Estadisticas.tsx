@@ -1,11 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto'; // Importa Chart.js
 import '../Estadisticas.css'; // Asegúrate de tener un archivo CSS para los estilos del Footer
 import Alerta from './Alerta'; // Asegúrate de que la ruta sea correcta
+
+type ChartInstance = {
+  chart: Chart<"doughnut", number[], string>; // Tipo de gráfico específico que estás utilizando
+  canvas: HTMLCanvasElement;
+};
 
 const Estadisticas = () => {
   const [id, setId] = useState('');
   const [alerta, setAlerta] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [conteoPorTema, setConteoPorTema] = useState<{ [key: string]: { correctas: number; incorrectas: number } }>({});
+  const chartInstances = useRef<ChartInstance[]>([]);
+
+  useEffect(() => {
+    // Cada vez que los datos de conteoPorTema cambien, actualiza los gráficos
+    actualizarGraficos();
+
+    // Función de limpieza al desmontar el componente
+    return () => {
+      chartInstances.current.forEach(({ chart }) => {
+        chart.destroy();
+      });
+    };
+  }, [conteoPorTema]);
 
   const handleConsultar = async () => {
     if (id.trim() === '') {
@@ -47,6 +66,50 @@ const Estadisticas = () => {
     }
   };
 
+  const actualizarGraficos = () => {
+    // Destruye los gráficos anteriores para evitar duplicados
+    chartInstances.current.forEach(({ chart }) => {
+      chart.destroy();
+    });
+
+    // Borra las referencias anteriores
+    chartInstances.current = [];
+
+    // Recorre los datos de conteoPorTema y crea un gráfico circular para cada tema
+    let rowIndex = 0;
+    Object.entries(conteoPorTema).forEach(([tema, conteo], index) => {
+      const canvas = document.getElementById(`${tema}-chart`) as HTMLCanvasElement;
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          const chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+              labels: ['Correctas', 'Incorrectas'],
+              datasets: [{
+                data: [conteo.correctas, conteo.incorrectas],
+                backgroundColor: ['#4caf50', '#f44336'],
+              }],
+            },
+          });
+          chartInstances.current.push({ chart, canvas });
+
+          // Calcula el índice de fila y columna
+          const columnIndex = index % 3;
+          if (columnIndex === 0 && index !== 0) {
+            rowIndex++;
+          }
+
+          // Establece las posiciones de los gráficos en función del índice de fila y columna
+         
+          canvas.style.marginBottom = '20px';
+          canvas.style.width = '100%';
+          canvas.style.height = 'auto';
+        }
+      }
+    });
+  };
+
   return (
     <>
       <h2 className="main-title">Estadísticas</h2>
@@ -71,21 +134,14 @@ const Estadisticas = () => {
       {Object.keys(conteoPorTema).length > 0 && (
         <div className="estadisticas-container">
           <h3>Estadísticas por tema</h3>
-          {Object.entries(conteoPorTema).map(([tema, conteo]) => (
-            <div className="tema-container" key={tema}>
-              <h4>{tema}</h4>
-              <div className="lineas-container">
-                <div className="linea">
-                  <div className="correctas-barra" style={{ width: `${(conteo.correctas / (conteo.correctas + conteo.incorrectas)) * 100}%` }}></div>
-                  <div className="incorrectas-barra" style={{ width: `${(conteo.incorrectas / (conteo.correctas + conteo.incorrectas)) * 100}%` }}></div>
-                </div>
+          <div className="graficos-container">
+            {Object.entries(conteoPorTema).map(([tema]) => (
+              <div className="tema-container" key={tema}>
+                <h4>{tema}</h4>
+                <canvas id={`${tema}-chart`} width="200" height="200"></canvas>
               </div>
-              <div className="conteo-container">
-                <span>Correctas: {conteo.correctas} ({((conteo.correctas / (conteo.correctas + conteo.incorrectas)) * 100).toFixed(2)}%)</span>
-                <span>Incorrectas: {conteo.incorrectas} ({((conteo.incorrectas / (conteo.correctas + conteo.incorrectas)) * 100).toFixed(2)}%)</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </>
