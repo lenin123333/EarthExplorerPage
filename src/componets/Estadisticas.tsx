@@ -12,6 +12,9 @@ const Estadisticas = () => {
   const [id, setId] = useState('');
   const [alerta, setAlerta] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [conteoPorTema, setConteoPorTema] = useState<{ [key: string]: { correctas: number; incorrectas: number } }>({});
+  const [temaMasRepetido, setTemaMasRepetido] = useState<string>('');
+  const [mejoresTiempos, setMejoresTiempos] = useState<{ [key: string]: number }>({});
+  const [total, setTotal] = useState<number>(0);
   const chartInstances = useRef<ChartInstance[]>([]);
 
   useEffect(() => {
@@ -56,6 +59,9 @@ const Estadisticas = () => {
 
         // Guardar los datos en el estado
         setConteoPorTema(data.conteoPorTema);
+        setTemaMasRepetido(data.temaMasRepetido);
+        setMejoresTiempos(data.bestTimes);
+        setTotal(data.total); // Actualizamos el total
         
         // Limpiar la alerta si hubo alguna
         setAlerta(null);
@@ -76,7 +82,6 @@ const Estadisticas = () => {
     chartInstances.current = [];
 
     // Recorre los datos de conteoPorTema y crea un gráfico circular para cada tema
-    let rowIndex = 0;
     Object.entries(conteoPorTema).forEach(([tema, conteo], index) => {
       const canvas = document.getElementById(`${tema}-chart`) as HTMLCanvasElement;
       if (canvas) {
@@ -94,14 +99,7 @@ const Estadisticas = () => {
           });
           chartInstances.current.push({ chart, canvas });
 
-          // Calcula el índice de fila y columna
-          const columnIndex = index % 3;
-          if (columnIndex === 0 && index !== 0) {
-            rowIndex++;
-          }
-
           // Establece las posiciones de los gráficos en función del índice de fila y columna
-         
           canvas.style.marginBottom = '20px';
           canvas.style.width = '100%';
           canvas.style.height = 'auto';
@@ -133,15 +131,27 @@ const Estadisticas = () => {
       {/* Visualización de estadísticas si hay datos */}
       {Object.keys(conteoPorTema).length > 0 && (
         <div className="estadisticas-container">
-          <h3>Estadísticas por tema</h3>
+          <h3>Tema más repetido: {temaMasRepetido}</h3>
           <div className="graficos-container">
             {Object.entries(conteoPorTema).map(([tema]) => (
               <div className="tema-container" key={tema}>
                 <h4>{tema}</h4>
-                <canvas id={`${tema}-chart`} width="200" height="200"></canvas>
+                <canvas id={`${tema}-chart`} width="15000" height="200"></canvas>
               </div>
             ))}
           </div>
+          <div className="mejores-tiempos-container">
+            <h3>Mejores tiempos</h3>
+            <p className='temaRepitido'>Niveles Jugados: <span>{total} de 18</span></p>
+            {Object.entries(mejoresTiempos).map(([nivel, datos]) => (
+              <div className="mejor-tiempo-tarjeta" key={nivel}>
+                <h4>Nivel {+nivel + 1}</h4>
+                <p>Mejor tiempo: {datos.bestTime.timeLevel} segundos</p>
+                <p>Usuario: {datos.bestTime.User.nameUser}</p>
+              </div>
+            ))}
+          </div>
+          
         </div>
       )}
     </>

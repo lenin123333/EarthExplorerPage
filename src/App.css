@@ -44,7 +44,7 @@ body, html {
   text-align: center;
   color: white; /* Cambia el color del texto según sea necesario */
   opacity: 0; /* Inicialmente, establece la opacidad del contenido en 0 */
-  animation: fadeInContent 2s 6s ease-in-out forwards; /* Agrega una animación para el título después de 6 segundos */
+  animation: fadeInContent 2s 2s ease-in-out forwards; /* Agrega una animación para el título después de 6 segundos */
   z-index: 2; /* Establece un z-index mayor para que esté encima de las imágenes */
   padding: 20px;
   border-radius: 10px; /* Añade bordes redondeados */

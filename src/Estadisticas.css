@@ -6,9 +6,12 @@
 
 .container {
   display: flex;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
-  margin-top: 20px; /* Agregamos margen superior */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+  /* Centra los elementos verticalmente */
+  margin-top: 20px;
+  /* Agregamos margen superior */
 }
 
 .sub-title {
@@ -44,61 +47,70 @@
   margin-top: 20px;
   color: white;
   width: 50%;
-  margin: 0 auto; /* Centra horizontalmente */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Agrega una sombra */
 }
-.estadisticas-container h3{
+
+.estadisticas-container h3 {
   font-size: 24px;
 }
-.estadisticas-container h4{
+
+.estadisticas-container h4 {
   font-size: 20px;
 }
+
 .tema-container {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .circulos-container {
-display: flex;
-align-items: center;
-width: 100%;
-height: 20px;
-margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 5px;
 }
 
 .circulo {
-height: 100%;
-border-radius: 50%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .correctas {
-background-color: #4caf50;
+  background-color: #4caf50;
 }
 
 .incorrectas {
-background-color: #f44336;
+  background-color: #f44336;
 }
 
 .conteo-container {
-display: flex;
-justify-content: space-between;
-margin-top: 5px;
-font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 /* Estilos específicos */
 /* Ajusta según tus necesidades */
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
-.estadisticas-container {
+  .estadisticas-container {
+
+    width: 75%;
+
+  }
+
+  .container {
+    flex-direction: column;
+
+  }
+
   
-  width: 75%;
- 
 }
-.container{
-  flex-direction: column;
-  
-}
-}
+
 /* Estilos para los gráficos */
 .graficos-container {
   display: flex;
@@ -107,11 +119,66 @@ font-size: 16px;
 }
 
 .tema-container {
-  width: calc(33.33% - 10px); /* Ajusta el ancho del contenedor según el número de gráficos por fila */
+  text-align: center;
+  width: calc(33.33% - 20px);
+  /* Ajusta el ancho del contenedor según el número de gráficos por fila */
   margin-bottom: 20px;
 }
 
 canvas {
   width: 100%;
   height: auto;
+}
+
+.temaRepitido {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+
+}
+
+.temaRepitido span {
+  font-weight: 900;
+}
+
+
+.estadisticas-container {
+  text-align: center;
+  color: white;
+  /* Cambia el color del texto */
+}
+
+
+.tema-container {
+  margin: 10px;
+}
+
+.tema-container h4 {
+  font-size: 18px;
+}
+
+.mejores-tiempos-container {
+  margin-top: 20px;
+}
+
+.mejor-tiempo-tarjeta {
+  background-color: #333;
+  /* Cambia el color de fondo */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Agrega una sombra suave */
+}
+
+.mejor-tiempo-tarjeta h4 {
+  margin-top: 0;
+}
+
+.mejor-tiempo-tarjeta:hover {
+  transform: scale(1.05);
+  /* Escala el tamaño en un 5% al hacer hover */
 }
